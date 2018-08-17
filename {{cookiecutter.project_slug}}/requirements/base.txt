@@ -59,3 +59,13 @@ django-compressor==2.2
 {% endif %}
 
 # Your custom requirements go here
+
+# 后台美化插件django-suit
+django-suit==0.2.25
+
+# mysqlclient 支持, win需要安装whl文件，linux系统不需要
+{% if cookiecutter.windows == "n" %}
+mysqlclient==1.3.9
+{% else %}
+.\whl\mysqlclient-1.3.13-cp35-cp35m-win_amd64.whl
+{% end if %}
